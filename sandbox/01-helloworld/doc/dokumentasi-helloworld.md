@@ -349,8 +349,15 @@ java version "20.0.2" 2023-07-18
 Java(TM) SE Runtime Environment (build 20.0.2+9-78)
 Java HotSpot(TM) 64-Bit Server VM (build 20.0.2+9-78, mixed mode, sharing)
 ```
+Sehingga aku perbarui isi dari `source` dan `target` menjadi sebagai berikut:
+
+```xml
+<source>20</source>
+<target>20</target>
+```
+
 > [!CAUTION]
-> Catatan: Pada beberapa lingkungan, hasil komando tersebut dapat berbeda dari JDK yang digunakan Maven, terutama jika JAVA_HOME dikonfigurasi berbeda atau IDE menggunakan JDK lain. Pastikan JAVA_HOME mengarah ke JDK yang benar.
+> Catatan: Pada beberapa lingkungan, hasil komando tersebut dapat berbeda dari JDK yang digunakan Maven, terutama jika `JAVA_HOME` dikonfigurasi berbeda atau IDE menggunakan JDK lain. Pastikan `JAVA_HOME` mengarah ke JDK yang benar.
 
 ### Plugin Maven Shade (Opsional)
 
@@ -389,7 +396,10 @@ Konfigurasi:
 
 Konfigurasi di atas:
 
-* Sudah mencakup seluruh kebutuhan dasar untuk menjalankan JavaFX melalui Maven.
-* Mendukung pembuatan *fat JAR* apabila diperlukan.
-* Menggunakan struktur yang umum dalam pengembangan aplikasi JavaFX modern.
-* Dapat digunakan pada Windows, Linux, maupun macOS.
+- Sudah mencakup seluruh kebutuhan dasar untuk menjalankan JavaFX melalui Maven.
+- Mendukung pembuatan *fat JAR* apabila diperlukan.
+- Menggunakan struktur yang umum dalam pengembangan aplikasi JavaFX modern.
+- Dapat digunakan pada Windows, Linux, maupun macOS.
+
+> [!TIP]
+> Proses pembuatan file jar dengan plugin tersebut masih dieskplorasi! Mungkin akan dibahas di latihan mendatang!
