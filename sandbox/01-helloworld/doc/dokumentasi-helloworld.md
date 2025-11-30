@@ -157,7 +157,7 @@ Ikuti step ini:
 3. Setelah memasang semua dependency yang dibutuhkan, yang kurang lebih seperti ini berarti:
 
     ```xml
-    <dependencys>
+    <dependencies>
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-controls -->
         <dependency>
           <groupId>org.openjfx</groupId>
@@ -182,9 +182,213 @@ Ikuti step ini:
             <artifactId>javafx-base</artifactId>
             <version>26-ea+18</version>
         </dependency>
-    <dependencys>
+    </dependencies>
     ```
 
-    Maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
+    Apabila aplikasi membutuhkan modul lain seperti `javafx-media`, `javafx-graphics`, atau `javafx-web`, modul tersebut dapat ditambahkan sesuai kebutuhan. Namun jika tidak digunakan, maka tidak perlu dipasang, karena hanya akan membebani program dan menjadi bloat.
 
-Jika semua proses ini sudah ter
+    Jika sudah, maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
+
+Jika semua proses berjalan lancar, maka selanjutnya adalah konfigurasi build.
+
+Karena JavaFX tidak lagi menjadi bagian dari JDK, Maven perlu tahu modul apa saja yang digunakan, serta class mana yang menjadi titik masuk aplikasi. Semua pengaturan ini ditempatkan di dalam bagian `<build>` pada `pom.xml`.
+
+Sebelum masuk ke konfigurasi detail, mari kita lihat terlebih dahulu plugin apa saja yang diperlukan untuk menjalankan dan membangun aplikasi JavaFX melalui Maven.
+Plugin-plugin ini digunakan untuk menjalankan JavaFX langsung dari Maven, serta menghasilkan berkas JAR yang dapat dieksekusi.
+
+1. [JavaFX Maven Plugin](https://mvnrepository.com/artifact/org.openjfx/javafx-maven-plugin) - Plugin utama yang bertugas menjalankan aplikasi JavaFX melalui perintah `mvn javafx:run`. Contoh kode dependency:
+
+    ```xml
+    <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-maven-plugin -->
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.8</version>
+    </dependency>
+    ```
+
+2. [Apache Maven Shade Plugin](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin) - Digunakan untuk menghasilkan _fat JAR_ atau _uber-jar_, yaitu JAR yang berisi seluruh dependency aplikasi. Dengan plugin ini, aplikasi dapat dijalankan menggunakan `java -jar` tanpa pengaturan classpath yang rumit.
+
+    ```xml
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-shade-plugin -->
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.6.1</version>
+    </dependency>
+    ```
+
+3. [Apache Maven Compiler Plugin](https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin) - Plugin ini memastikan bahwa Maven menggunakan versi bahasa Java yang sesuai dengan JDK yang digunakan saat proses kompilasi.
+
+    ```xml
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+    <dependency>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.14.1</version>
+    </dependency>
+    ```
+
+> [!WARNING]
+> Masing-masing dari plugin diatas perlu konfigurasi tambahan, yang akan dibahas di konfigurasi `pom.xml` final!
+
+Sekarang perhatikan bahwa ketiga plugin tersebut dibungkus oleh blok `<dependency>`. Tapi karena kita membutuhkan dependency diatas sebagai plugin, maka ganti blok tersebut menjadi `<plugin>`. Ini karena Maven Repo tidak bisa membedakan apakah sebuah artifact itu akan digunakan sebagai dependency, plugin, exstension, atau tool lain, sehingga kita harus menggantinya secara manual. 
+
+Sehingga kode akhir yang didapat adalah sebagai berikut:
+
+```xml
+<plugin>
+    <groupId>org.openjfx</groupId>
+    <artifactId>javafx-maven-plugin</artifactId>
+    <version>0.0.8</version>
+</plugin>
+```
+
+dan...
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.6.1</version>
+</plugin>
+```
+
+Setelah memahami bahwa snippet dari Maven Repository tidak selalu mencerminkan cara pemakaian yang benar, langkah selanjutnya adalah menuliskan plugin tersebut pada lokasi yang tepat di dalam `pom.xml`.
+
+Dalam Maven, semua plugin harus ditempatkan di dalam bagian `<build>` → `<plugins>`.
+Inilah yang membuat Maven tahu bagaimana menjalankan, membangun, atau mengemas aplikasi JavaFX.
+
+Contoh penulisan plugin yang benar:
+
+```xml
+<build>
+    <plugins>
+
+        <!-- Plugin untuk menjalankan JavaFX -->
+        <plugin>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>0.0.8</version>
+        </plugin>
+
+        <!-- Plugin untuk membuat fat-jar -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.6.1</version>
+        </plugin>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.14.1</version>
+        </plugin>
+
+    </plugins>
+</build>
+```
+
+Dengan cara ini, Maven akan mengenali kedua plugin tersebut sebagai bagian dari proses build, bukan sebagai dependency runtime.
+
+Jika semua proses berjalan lancar, maka selanjutnya adalah konfigurasi build.
+Pada tahap ini, kita perlu memastikan bahwa project memiliki plugin yang tepat—bukan sekadar ada, tapi dipahami kegunaannya. Banyak pemula asal tempel konfigurasi dari StackOverflow, terus bingung sendiri kalau build macet.
+
+## Konfigurasi pom.xml Final
+
+### Plugin JavaFX Maven
+
+Plugin ini memungkinkan aplikasi dijalankan langsung melalui perintah:
+
+```
+mvn javafx:run
+```
+
+Konfigurasinya sebagai berikut:
+
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-maven-plugin</artifactId>
+            <version>0.0.8</version>
+            <configuration>
+                <mainClass>${package-Anda.nama-file-Anda}</mainClass>
+            </configuration>
+        </plugin>
+```
+
+Katakanlah kita memiliki file Java yang menjadi program utama yaitu app.Main. Maka ganti `<mainClass>` menjadi:
+
+```xml
+<mainClass>app.Main</mainClass>
+```
+
+### Plugin Maven Compiler
+
+Plugin ini memastikan Maven menggunakan versi bahasa Java yang sesuai dengan JDK yang digunakan.
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version>
+            <configuration>
+                <source>17</source>
+                <target>17</target>
+            </configuration>
+        </plugin>
+```
+
+Versi `source` dan `target` sebaiknya menyesuaikan dengan JDK Anda (misalnya 17, 21, dan seterusnya). Bisa dicek diterminal dengan perintah `java -version`, yang mana hasilnya biasanya seperti ini:
+
+```bash
+java version "20.0.2" 2023-07-18
+Java(TM) SE Runtime Environment (build 20.0.2+9-78)
+Java HotSpot(TM) 64-Bit Server VM (build 20.0.2+9-78, mixed mode, sharing)
+```
+> [!CAUTION]
+> Catatan: Pada beberapa lingkungan, hasil komando tersebut dapat berbeda dari JDK yang digunakan Maven, terutama jika JAVA_HOME dikonfigurasi berbeda atau IDE menggunakan JDK lain. Pastikan JAVA_HOME mengarah ke JDK yang benar.
+
+### Plugin Maven Shade (Opsional)
+
+Plugin ini digunakan apabila Anda ingin menghasilkan *fat JAR* atau *uber JAR*, yakni satu berkas JAR yang sudah berisi seluruh dependensi. Dengan ini, aplikasi dapat dijalankan menggunakan:
+
+```
+java -jar nama-aplikasi.jar
+```
+
+Konfigurasi:
+
+```xml
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-shade-plugin</artifactId>
+            <version>3.5.0</version>
+            <executions>
+                <execution>
+                    <phase>package</phase>
+                    <goals>
+                        <goal>shade</goal>
+                    </goals>
+                    <configuration>
+                        <transformers>
+                            <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                <mainClass>app.Main</mainClass>
+                            </transformer>
+                        </transformers>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+```
+
+Konfigurasi di atas:
+
+* Sudah mencakup seluruh kebutuhan dasar untuk menjalankan JavaFX melalui Maven.
+* Mendukung pembuatan *fat JAR* apabila diperlukan.
+* Menggunakan struktur yang umum dalam pengembangan aplikasi JavaFX modern.
+* Dapat digunakan pada Windows, Linux, maupun macOS.
