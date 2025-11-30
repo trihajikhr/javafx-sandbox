@@ -185,7 +185,8 @@ Ikuti step ini:
     </dependencies>
     ```
 
-    Apabila aplikasi membutuhkan modul lain seperti `javafx-media`, `javafx-graphics`, atau `javafx-web`, modul tersebut dapat ditambahkan sesuai kebutuhan. Namun jika tidak digunakan, maka tidak perlu dipasang, karena hanya akan membebani program dan menjadi bloat.
+    > [!CAUTION]
+    > Apabila aplikasi membutuhkan modul lain seperti `javafx-media`, `javafx-graphics`, atau `javafx-web`, modul tersebut dapat ditambahkan sesuai kebutuhan. Namun jika tidak digunakan, maka tidak perlu dipasang, karena hanya akan membebani program dan menjadi bloat.
 
     Jika sudah, maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
 
@@ -229,7 +230,7 @@ Plugin-plugin ini digunakan untuk menjalankan JavaFX langsung dari Maven, serta 
     </dependency>
     ```
 
-> [!WARNING]
+> [!CAUTION]
 > Masing-masing dari plugin diatas perlu konfigurasi tambahan, yang akan dibahas di konfigurasi `pom.xml` final!
 
 Sekarang perhatikan bahwa ketiga plugin tersebut dibungkus oleh blok `<dependency>`. Tapi karena kita membutuhkan dependency diatas sebagai plugin, maka ganti blok tersebut menjadi `<plugin>`. Ini karena Maven Repo tidak bisa membedakan apakah sebuah artifact itu akan digunakan sebagai dependency, plugin, exstension, atau tool lain, sehingga kita harus menggantinya secara manual. 
