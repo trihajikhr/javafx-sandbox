@@ -8,9 +8,9 @@ import javafx.stage.Stage;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/helloworld.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/myTeam.fxml"));
         stage.setScene(new Scene(loader.load()));
-        stage.setTitle("Program Hello World");
+        stage.setTitle("Anggota teamku!");
         stage.show();
     }
 
