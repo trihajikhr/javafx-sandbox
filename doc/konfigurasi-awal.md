@@ -12,7 +12,9 @@ Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini
 
 1. Buat projek baru dengan langsung menggunakan Maven sebagai projek managernya. Jika menggunakan Intellij, proses ini seharusnya mudah, kalau bingung, tanya AI aja, dan pasti bakal tahu kalau proses ini itu mudah. Baiklah, serius kali ini 😤, buat projek baru dengan memilih opsi ini:
 
-    ![img_2.png](media/konfig-awal-01.png)
+    <div align="center">
+        <img src="media/konfig-awal-01.png" />
+    </div>
 
     Pilih projek manager Maven, setelah itu tentukan nama projek yang ingin digunakan, sesuai dengan projek yang ingin dibuat. Setelah itu, pada bagian Catalog, pilih `Maven Central`. Pada bagian Advanced Settings, jika ingin membuat penamaan custom, bisa isi groudID, artifactID, dan Version secara manual. 
 
@@ -98,7 +100,9 @@ Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini
 
    Jika sudah, maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. 
 
-    ![konfig-awal-02.png](media/konfig-awal-02.png)
+   <div align="center">
+        <img src="media/konfig-awal-02.png" width="600"/>
+    </div>
 
     Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
 
