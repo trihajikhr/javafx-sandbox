@@ -1,6 +1,6 @@
 # Konfigurasi pom.xml
 
-Ada banyak automation build tool untuk Java, dan aku menggunakan Maven. Ini mempermudah kita membuat dan mengelola projek. Misal jika kita membutuhkan library tertentu, kita tidak perlu repot-repot instal dan pasang manual, cukup copy-paste kode dependency dari [Maven Repositroy](https://mvnrepository.com/), dan kita sudah berhasil memasang library yang kita mau.
+Ada banyak automation build tool untuk Java, dan aku menggunakan Maven. Ini mempermudah kita membuat dan mengelola projek. Misal jika kita membutuhkan library tertentu, kita tidak perlu repot-repot install dan pasang manual, cukup copy-paste kode dependency dari [Maven Repository](https://mvnrepository.com/), dan kita sudah berhasil memasang library yang kita mau.
 
 Selain itu, proses build dan lain sebagainya juga bisa dikonfigurasi. Intinya banyak hal menjadi lebih mudah dengan menggunakan bantuan automation build tool Maven ini. Intinya, dengan menggunakan Maven, kita bisa mengalokasikan tugas pemasangan library dengan cepat dan efisien, dan banyak tugas lainya yang bisa diotomatiskan. 
 
@@ -12,9 +12,8 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
 
     Pilih projek manager Maven, setelah itu tentukan nama projek yang ingin digunakan, sesuai dengan projek yang ingin dibuat. Setelah itu, pada bagian Catalog, pilih `Maven Central`. Pada bagian advanced, jika ingin membuat penamaan custom, bisa isi groudID, artifactID, dan Version secara manual. 
 
-    > [!CAUTION]
-    >
-    > Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian advanced yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
+> [!CAUTION]
+> Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian advanced yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
 
 2. Setelah mendapatkan file `pom.xml`, maka kita perlu memasang beberapa dependency yang dibutuhkan, antara lain:
     - [JavaFX Controls](https://mvnrepository.com/artifact/org.openjfx/javafx-controls) - Digunakan untuk mendapatkan komponen UI seperti Button, TextField, Label, dll. Ini yang paling sering dipakai. Salah satu dependency yang bisa dipasang mungkin seperti ini (yang berasal dari versi terbaru):
