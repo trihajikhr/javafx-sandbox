@@ -1,4 +1,4 @@
-# Java Swing dan JavaFX
+# Java Swing VS JavaFX
 
 **Java Swing** adalah toolkit antarmuka pengguna grafis (GUI) yang telah lama menjadi bagian dari Java Foundation Classes (JFC). Swing memungkinkan pengembang untuk membuat aplikasi desktop dengan elemen-elemen GUI seperti tombol, kotak teks, dan tabel. Swing **platform-independent**, artinya aplikasi yang dibuat dapat berjalan di berbagai sistem operasi.
 
