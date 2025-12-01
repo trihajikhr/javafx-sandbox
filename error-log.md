@@ -61,9 +61,17 @@ Proses ini memakan waktu lama, jadi tunggu saja.
 - Proses update ke JDK 25 sangat panjang, dan hbanyak path environtmen yang harus dihapus, suapa jdk-25 lah yang hanya terbaca, baru setlah itu tidak ada eror untuk:
 
 ```bash
+rmdir /s /q custom-jre
 jlink --module-path "C:\Program Files\Java\jdk-25.0.1\jmods;C:\Program Files\Java\javafx-sdk-25.0.1\lib" --add-modules java.base,java.desktop,javafx.controls,javafx.fxml --output custom-jre
-Error: directory already exists: custom-jre
 ```
+
+atau:
+
+```bash
+jlink --module-path "C:\Program Files\Java\jdk-25.0.1\jmods;C:\Program Files\Java\javafx-sdk-25.0.1\lib;C:\Program Files\Java\javafx-jmods-25.0.1" --add-modules java.base,java.desktop,javafx.controls,javafx.fxml --output custom-jre
+```
+
+`Error: directory already exists: custom-jre`
 
 akan mebuat file custom-jre. yang isinya sudah ada beberapa file lain
 
@@ -71,4 +79,36 @@ baru setelah itu jalankan:
 
 ```bash
 jpackage --input target --name MyTeam --main-jar javafx-sandbox-0.0.jar --type app-image --runtime-image custom-jre --icon src/main/resources/icons/favicon.ico
+```
+
+Youtube: lumayan berguna: [youtube](https://www.youtube.com/watch?v=EB6HqDwMffU)
+
+Akhirnya berhasil cok!!!
+
+Versi sederhana:
+```bash
+jpackage --type exe --input target --dest target --main-jar javafx-sandbox-0.0.jar --main-class app.Main --module-path "C:\Program Files\Java\javafx-jmods-25.0.1;C:\Program Files\Java\jdk-25.0.1\jmods" --add-modules javafx.controls,javafx.fxml --win-shortcut --win-menu
+```
+
+Versi advanced tapi masih ada error
+```bash
+jpackage --name MyTeam --type exe --input target --dest target --main-jar javafx-sandbox-0.0.jar --main-class app.Main --module-path "C:\Program Files\Java\javafx-jmods-25.0.1;C:\Program Files\Java\jdk-25.0.1\jmods" --add-modules javafx.controls,javafx.fxml --icon "src/main/resources/icons/favicon.ico" --win-shortcut --win-menu
+```
+
+Mencoba tanpa icon, apakah bisa?
+
+```bash
+jpackage --name MyTeam --type exe --input target --dest target --main-jar javafx-sandbox-0.0.jar --main-class app.Main --module-path "C:\Program Files\Java\javafx-jmods-25.0.1;C:\Program Files\Java\jdk-25.0.1\jmods" --add-modules javafx.controls,javafx.fxml --win-shortcut --win-menu
+```
+
+Masih error, apakah dengan icon tapi tanpa nama bisa?
+
+```bash
+jpackage --type exe --input target --dest target --main-jar javafx-sandbox-0.0.jar --main-class app.Main --module-path "C:\Program Files\Java\javafx-jmods-25.0.1;C:\Program Files\Java\jdk-25.0.1\jmods" --add-modules javafx.controls,javafx.fxml --icon "src/main/resources/icons/favicon.ico" --win-shortcut --win-menu
+```
+
+Ohh ternyata BISA! Masalah ditemukan di masalah penamaan, ternyata sudah ada beberapa apliasi dengan nama MyTeam, yang membuat aplikasinya silent installer, ngga mau jalan! Hapus instalasi aplikasi di setting->app, lalu cari MyTeam. baru bisa dia. Mari tambahkan Vendor sekarang:
+
+```bash
+jpackage --name MyTeam --vendor MyTeam-Inc --type exe --input target --dest target --main-jar javafx-sandbox-0.0.jar --main-class app.Main --module-path "C:\Program Files\Java\javafx-jmods-25.0.1;C:\Program Files\Java\jdk-25.0.1\jmods" --add-modules javafx.controls,javafx.fxml --icon "src/main/resources/icons/favicon.ico" --win-shortcut --win-menu
 ```
