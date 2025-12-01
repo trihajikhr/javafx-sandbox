@@ -19,7 +19,7 @@ Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini
 > [!CAUTION]
 > Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian Advanced Settings yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
 
-2. Setelah mendapatkan file `pom.xml`, maka kita perlu memasang beberapa dependency yang dibutuhkan, antara lain:
+2. Setelah projek baru berhasil dibuat, lihat pada bagian daftar folder, tepatnya di root folder. Akan terdapat sebuah file yang bernama `pom.xml`. Di file inilah kita akan mengkonfigurasi bagaimana Maven seharusnya bekerja. Selanjutnya,  hal yang perlu kita lakukan adalah memasang beberapa dependency yang dibutuhkan, antara lain:
     - [JavaFX Controls](https://mvnrepository.com/artifact/org.openjfx/javafx-controls) - Digunakan untuk mendapatkan komponen UI seperti Button, TextField, Label, dll. Ini yang paling sering dipakai. Salah satu dependency yang bisa dipasang mungkin seperti ini (yang berasal dari versi terbaru):
 
         ```xml
