@@ -63,6 +63,9 @@ Oleh karena itu, meskipun kritikan terhadap *drag-and-drop* itu valid untuk tekn
 
 Cara paling modern dan direkomendasikan untuk menggunakan JavaFX adalah melalui sistem manajemen dependensi seperti **Maven** atau **Gradle**. Berikut adalah langkah-langkahnya menggunakan **Maven**, yang merupakan praktik standar industri:
 
+> [!TIP]
+> Untuk versi penjelasan yang lebih detail dan lengkap, bisa lanjutkan ke dokumentasi  [Konfigurasi awal](konfigurasi-awal.md). Penjelasan ini hanyalah gambaran besar, dan ditujukan untuk pengguna yang sudah pernah menggunakan Maven sebelumnya.
+
 ### 1. Prasyarat
 
 Pastikan Anda telah menginstal ini di sistem Anda:
@@ -79,6 +82,7 @@ Buat proyek Maven baru di IDE Anda atau melalui *command line*. Proyek ini akan 
 
 Buka file `pom.xml` dan tambahkan dependensi untuk modul JavaFX yang Anda butuhkan (misalnya, `javafx-controls` dan `javafx-fxml`).
 
+> [!CAUTION]
 > Pastikan untuk mengganti `${javafx.version}` dengan versi JavaFX terbaru yang stabil (misalnya, 21 atau 22).
 
 ```xml
@@ -133,7 +137,8 @@ Tambahkan plugin ini di bagian `<build>` dari `pom.xml`:
   mvn clean javafx:run
   ```
 
-**Catatan Penting:** Jika Anda tidak menggunakan Maven atau Gradle, Anda harus mengunduh JavaFX SDK secara manual, menyetel *path* ke *library* tersebut, dan menjalankannya secara eksplisit menggunakan opsi `--module-path` pada *command line*. Namun, metode ini **tidak disarankan** untuk proyek serius karena kompleksitasnya.
+> [!IMPORTANT]
+> Jika Anda tidak menggunakan Maven atau Gradle, Anda harus mengunduh JavaFX SDK secara manual, menyetel *path* ke *library* tersebut, dan menjalankannya secara eksplisit menggunakan opsi `--module-path` pada *command line*. Namun, metode ini **tidak disarankan** untuk proyek serius karena kompleksitasnya.
 
 ## ⛓️‍💥 Link Dependency & Dokumentasi JavaFX
 
