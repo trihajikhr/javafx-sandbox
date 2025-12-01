@@ -39,12 +39,12 @@ Kesimpulanya, tidak wajib menggunakan Scene Builder, kita tetap bisa membuat UI 
 
 Untuk bisa menggunakan Scene Builder, unduh terlebih dahulu dari laman web [gluonhq](https://gluonhq.com/products/scene-builder/). 
 
-![img.png](media/img.png)
+![img.png](media/gluonhq.png)
 
 Setelah berhasil di donwload, lakukan pemasangan seperti aplikasi pada umumnya, langsung next next saja. Supaya lebih rapi, atur dengan benar lokasi folder pemasangan dari aplikasi ini.
 
 Setelah terpasang, buka aplikasi Scene Builder, tampilanya harusnya adalah seperti ini:
 
-![img_1.png](media/img_1.png)
+![img_1.png](media/scenebuilder.png)
 
 Jika ingin membuat desain GUI dengan JavaFX, maka pilih versi desktop. Dan... waktunya berkreasi, mendesain tampilan UI dari projekan Javamu 😀.

@@ -8,12 +8,12 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
 
 1. Buat projek baru dengan langsung menggunakan Maven sebagai projek managernya. Jika menggunakan Intellij, proses ini seharusnya mudah, kalau bingung, tanya AI aja, dan pasti bakal tahu kalau proses ini itu mudah. Baiklah, serius kali ini 😤, buat projek baru dengan memilih opsi ini:
 
-    ![img_2.png](media/img_2.png)
+    ![img_2.png](media/konfig-awal-01.png)
 
-    Pilih projek manager Maven, setelah itu tentukan nama projek yang ingin digunakan, sesuai dengan projek yang ingin dibuat. Setelah itu, pada bagian Catalog, pilih `Maven Central`. Pada bagian advanced, jika ingin membuat penamaan custom, bisa isi groudID, artifactID, dan Version secara manual. 
+    Pilih projek manager Maven, setelah itu tentukan nama projek yang ingin digunakan, sesuai dengan projek yang ingin dibuat. Setelah itu, pada bagian Catalog, pilih `Maven Central`. Pada bagian Advanced Settings, jika ingin membuat penamaan custom, bisa isi groudID, artifactID, dan Version secara manual. 
 
 > [!CAUTION]
-> Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian advanced yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
+> Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian Advanced Settings yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
 
 2. Setelah mendapatkan file `pom.xml`, maka kita perlu memasang beberapa dependency yang dibutuhkan, antara lain:
     - [JavaFX Controls](https://mvnrepository.com/artifact/org.openjfx/javafx-controls) - Digunakan untuk mendapatkan komponen UI seperti Button, TextField, Label, dll. Ini yang paling sering dipakai. Salah satu dependency yang bisa dipasang mungkin seperti ini (yang berasal dari versi terbaru):
@@ -38,7 +38,7 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
          </dependency>
          ```
 
-    - [JavaFX Graphics](https://mvnrepository.com/artifact/org.openjfx/javafx-graphics) - Ini adalah modul inti rendering dan scene graph, tanpa ini, JavaFX tidak akan berjalan. Seperti ini kode depencenynya dari versi terbaru:
+    - [JavaFX Graphics](https://mvnrepository.com/artifact/org.openjfx/javafx-graphics) - Ini adalah modul inti rendering dan scene graph, tanpa ini, JavaFX tidak akan berjalan. Seperti ini kode dependencynya dari versi terbaru:
 
          ```xml
          <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-graphics -->
@@ -61,7 +61,7 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
 
     - Beberapa dependency yang bisa dipasang, namun bersifat opsional, antara lain seperti: [javafx-media](https://mvnrepository.com/artifact/org.openjfx/javafx-media), [javafx-web](https://mvnrepository.com/artifact/org.openjfx/javafx-web), [javafx-swing](https://mvnrepository.com/artifact/org.openjfx/javafx-swing), [javafx-swt](https://mvnrepository.com/artifact/org.openjfx/javafx-swt).
 
-3. Setelah memasang semua dependency yang dibutuhkan, yang kurang lebih seperti ini berarti:
+3. Setelah memasang semua dependency yang dibutuhkan, maka daftar dependency yang kita punya mungkin menjadi seperti ini:
 
     ```xml
     <dependencies>
@@ -92,7 +92,11 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
     </dependencies>
     ```
 
-   Jika sudah, maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
+   Jika sudah, maka langkah selanjutnya adalah lakukan sinkroninasi file `pom.xml` untuk mengunduh dependency tersebut. 
+
+    ![konfig-awal-02.png](media/konfig-awal-02.png)
+
+    Tunggu hingga proses selesai, pastikan tidak ada yang error. Jika ada yang error, baca pesan error tersebut dengan teliti, biasanya masalah terletak pada versi atau artifactID yang tidak dikenali. Jika hal ini terjadi, maka cukup cek lagi dependency tersebut ke Maven Repository, dan salin dependency yang baru.
 
 > [!CAUTION]
 > Apabila aplikasi membutuhkan modul lain seperti `javafx-media`, `javafx-graphics`, atau `javafx-web`, modul tersebut dapat ditambahkan sesuai kebutuhan. Namun jika tidak digunakan, maka tidak perlu dipasang, karena hanya akan membebani program dan menjadi bloat.
