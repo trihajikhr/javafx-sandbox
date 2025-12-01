@@ -4,7 +4,11 @@ Ada banyak automation build tool untuk Java, dan aku menggunakan Maven. Ini memp
 
 Selain itu, proses build dan lain sebagainya juga bisa dikonfigurasi. Intinya banyak hal menjadi lebih mudah dengan menggunakan bantuan automation build tool Maven ini. Intinya, dengan menggunakan Maven, kita bisa mengalokasikan tugas pemasangan library dengan cepat dan efisien, dan banyak tugas lainya yang bisa diotomatiskan. 
 
-Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manager dari repo JavaFX. Jika ingin membuat aplikasi JavaFx dengan menggunakan Maven, maka ikuti dokumentasi berikut:
+Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manager dari repo JavaFX. Jika ingin membuat aplikasi JavaFx dengan menggunakan Maven, maka ikuti dokumentasi ini.
+
+## Memasang Dependency
+
+Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini bisa dilakukan dengan mudah di Maven, yaitu cukup dengan menambahkan dependency yang dibutuhkan, ikuti panduan berikut:
 
 1. Buat projek baru dengan langsung menggunakan Maven sebagai projek managernya. Jika menggunakan Intellij, proses ini seharusnya mudah, kalau bingung, tanya AI aja, dan pasti bakal tahu kalau proses ini itu mudah. Baiklah, serius kali ini 😤, buat projek baru dengan memilih opsi ini:
 
@@ -102,6 +106,8 @@ Oleh karena itu, dipilihlah automation build tool Maven ini sebagai projek manag
 > Apabila aplikasi membutuhkan modul lain seperti `javafx-media`, `javafx-graphics`, atau `javafx-web`, modul tersebut dapat ditambahkan sesuai kebutuhan. Namun jika tidak digunakan, maka tidak perlu dipasang, karena hanya akan membebani program dan menjadi bloat.
 
 Jika semua proses berjalan lancar, maka selanjutnya adalah konfigurasi build.
+
+## Konfigurasi Build
 
 Karena JavaFX tidak lagi menjadi bagian dari JDK, Maven perlu tahu modul apa saja yang digunakan, serta class mana yang menjadi titik masuk aplikasi. Semua pengaturan ini ditempatkan di dalam bagian `<build>` pada `pom.xml`.
 
@@ -311,6 +317,9 @@ Konfigurasi di atas:
 - Mendukung pembuatan *fat JAR* apabila diperlukan.
 - Menggunakan struktur yang umum dalam pengembangan aplikasi JavaFX modern.
 - Dapat digunakan pada Windows, Linux, maupun macOS.
+
+> [!NOTE]
+> Sebagai gambaran yang lebih jelas, konfigurasi Maven untuk repo ini bisa dilihat di [pom.xml](../pom.xml)
 
 > [!TIP]
 > Proses pembuatan file jar dengan plugin tersebut masih dieskplorasi! Mungkin akan dibahas di latihan mendatang!
