@@ -148,4 +148,4 @@ Tambahkan plugin ini di bagian `<build>` dari `pom.xml`:
 - [OpenJFX » 26-ea+18](https://mvnrepository.com/artifact/org.openjfx/javafx/26-ea+18) - Dependency JavaFX yang lebih baru.
 - [Run HelloWorld using Maven](https://openjfx.io/openjfx-docs/#maven) - Menjalankan program JavaFX dengan menggunaan Maven.
 - [JavaFX FXML](https://mvnrepository.com/artifact/org.openjfx/javafx-fxml) - Dependency JavaFX FXML dari Maven.
-- [Gluon Scene-Builder](https://gluonhq.com/products/scene-builder/) - Fitur drag-and-drop JavaFX. Harus dilakukan dengan aplikasi terpisah ini. Install terlebih dahulu, dan koneksikan ke Intellij.
+- [Gluon Scene-Builder](https://gluonhq.com/products/scene-builder/) - Fitur _drag-and-drop_ JavaFX, yang bisa dilakukan dengan aplikasi terpisah ini. Install terlebih dahulu, dan koneksikan ke Intellij. Panduan ini ada di dokumentasi [Scene builder](scene-builder.md).

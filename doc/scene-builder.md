@@ -39,12 +39,77 @@ Kesimpulanya, tidak wajib menggunakan Scene Builder, kita tetap bisa membuat UI 
 
 Untuk bisa menggunakan Scene Builder, unduh terlebih dahulu dari laman web [gluonhq](https://gluonhq.com/products/scene-builder/). 
 
-![img.png](media/gluonhq.png)
+<div align="center">
+    <img src="media/gluonhq.png" />
+</div>
 
 Setelah berhasil di donwload, lakukan pemasangan seperti aplikasi pada umumnya, langsung next next saja. Supaya lebih rapi, atur dengan benar lokasi folder pemasangan dari aplikasi ini.
 
 Setelah terpasang, buka aplikasi Scene Builder, tampilanya harusnya adalah seperti ini:
 
-![img_1.png](media/scenebuilder.png)
+<div align="center">
+    <img src="media/scenebuilder.png" />
+</div>
 
 Jika ingin membuat desain GUI dengan JavaFX, maka pilih versi desktop. Dan... waktunya berkreasi, mendesain tampilan UI dari projekan Javamu 😀.
+
+## Menghubungkan Scene Builder dengan IntelliJ IDEA
+
+Agar desain UI yang dibuat di Scene Builder bisa langsung terintegrasi dengan proyek JavaFX-mu di IntelliJ, ada beberapa langkah penting yang harus diatur. Tujuannya sederhana: IntelliJ tahu di mana file FXML berada, dan Scene Builder bisa membuka file itu langsung dari IDE.
+
+### 1. Struktur Folder FXML
+
+Ketika proses desain di Scene Builder telah dilakukan, maka langkah selanjutnya adalah _save_ atau simpan hasil pekerjaan tersebut. Otomatis, kamu akan diminta untuk menentukan dimana lokasi `file.fxml` akan disimpan. Nah, ini tahap penting yang perlu dilakukan, yaitu menyimpan hasil pekerjaan tadi didalam folder projek Java kita, yang harus sesuai dan mengikuti aturan **struktur folder** Maven.
+
+Pastikan file FXML disimpan di dalam direktori resource milik Maven:
+
+```
+src/
+ └─ main/
+     ├─ java/
+     └─ resources/
+         └─ fxml/
+             └─ myAppUI.fxml   <-- disini!
+```
+
+> [!CAUTION]
+> Lokasi ini penting karena folder `main/resources` otomatis dimasukkan ke classpath saat aplikasi dijalankan, sehingga controller JavaFX bisa menemukan file FXML tanpa drama.
+
+### 2. **Set Path Scene Builder di IntelliJ**
+
+Agar tombol *"Open in Scene Builder"* muncul dan berfungsi, IntelliJ perlu tahu lokasi executable Scene Builder.
+
+Caranya:
+
+1. Buka **File → Settings → Languages & Frameworks → JavaFX**
+2. Pada bagian **Path to SceneBuilder**, arahkan ke file executable:
+
+    * Windows → `SceneBuilder.exe`
+    * macOS → `.app`
+    * Linux → bin script
+
+Kalau path tidak diatur, IntelliJ tidak akan bisa membuka Scene Builder saat kamu klik kanan FXML.
+
+### 3. **Membuka File FXML dari IntelliJ**
+
+Setelah path diset:
+
+1. Klik kanan file FXML kamu → **Open in Scene Builder**.
+2. IntelliJ akan langsung membuka Scene Builder dengan layout yang sesuai.
+
+Ini jauh lebih cepat dibanding membuka Scene Builder manual, lalu mencari file FXML secara terpisah.
+
+### 4. **Tips Integrasi**
+
+* Nama file FXML sebaiknya konsisten dengan controller (contoh: `MyAppUI.fxml` ↔ `MyAppUIController.java`).
+* Jika controller tidak terhubung, cek tag berikut di FXML:
+
+```xml
+fx:controller="com.example.controllers.MyAppUIController"
+```
+
+* Pastikan folder `resources` ditandai sebagai *Resources Root* (biasanya otomatis, tapi beberapa project template tidak melakukanya, sehingga harus diset secara manual).
+
+---
+
+Jika semua proses sudah selesai, maka tahap selanjutnya adalah mencoba membuat program Java yang memanggil JavaFX. Dokumentasi ini dimulai di [program Helloworld](../sandbox/01-helloworld/doc/dokumentasi-helloworld.md).
