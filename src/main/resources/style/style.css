@@ -1,0 +1,58 @@
+#tampil {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+#tampil:hover {
+    -fx-background-color: #45a049;
+}
+
+#sembunyi {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+#sembunyi:hover {
+    -fx-background-color: #da190b;
+}
+
+#tambah {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+#tambah:hover {
+    -fx-background-color: #0b7dda;
+}
+
+
+
+/* ScrollPane mirip TextArea */
+.scroll-pane {
+    -fx-background-color: white;
+    -fx-border-color: gray;
+    -fx-border-radius: 4;
+}
+
+/* Padding TextFlow */
+#textFlow {
+    -fx-padding: 5;
+}
+
+/* Label / blok hover di TextFlow */
+#textFlow .label {
+    -fx-background-color: transparent;
+    -fx-padding: 3 5 3 5;
+    -fx-border-radius: 4;
+}
+
+/* Hover effect */
+#textFlow .label:hover {
+    -fx-background-color: lightgray;
+    -fx-cursor: hand;
+}
+
+/* Pressed effect */
+#textFlow .label:pressed {
+    -fx-background-color: gray; /* lebih gelap dari hover */
+}
