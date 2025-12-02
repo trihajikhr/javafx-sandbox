@@ -22,7 +22,7 @@ Format JAR (Java ARchive) digunakan sebagai cara standar untuk mengemas aplikasi
 
 Untuk bisa mengkonveri program Java yang dibangun dengan menggunakan Maven, kita bisa menggunakan konfigurasi build dari Maven untuk membuat file JAR tersebut. Syarat-syarat berikut perlu dipenuhi:
 
-1. Pastikan JDK telah terpasang dan variabel lingkungan seperti `JAVA_HOME` telah dikonfigurasi dengan benar. Install JDK versi terbaru di [jdk.java.net](https://jdk.java.net/), dan pilih versi terbaru, misal ketika dokumentasi ini dibuat, sudah terdapat JDK 25. Jika proses pemasangan sudah dilakukan, lakukan setup dan konfigurasi pada Environtment Variables, dengan mengatur `PATH` dan `JAVA_HOME` yang mengarah ke path tempat JDK terpasang. Misalnya seperti ini:
+1. Pastikan JDK telah terpasang dan Environtmen Variables seperti `JAVA_HOME` telah dikonfigurasi dengan benar. Install JDK versi terbaru di [jdk.java.net](https://jdk.java.net/), dan pilih versi terbaru, misal ketika dokumentasi ini dibuat, sudah terdapat JDK 25. Jika proses pemasangan sudah dilakukan, lakukan setup dan konfigurasi pada Environtment Variables, dengan mengatur `PATH` dan `JAVA_HOME` yang mengarah ke path tempat JDK terpasang. Misalnya seperti ini:
 
     `Path`:
     ```bash
@@ -166,8 +166,8 @@ Setelah proses selesai tanpa error, file JAR dapat ditemukan di dalam folder `ta
 
 Maka akan dihasilkan berkas JAR dengan nama `javafx-sandbox-v0.0.2.jar`. 
 
-> [TIP]
-> Jika ingin dihasilkan berkas JAR dengan nama custom, cukup rubah konfigurasi `pom.xml` sesuai keingingan.
+> [!TIP]
+> Jika ingin dihasilkan berkas JAR dengan nama custom, cukup rubah konfigurasi `pom.xml` sesuai keingingan dan kebutuhan.
 
 ## Error Log
-Terkadang terdapat error yang terjadi ketika dilakukan proses ini, dan berikut `error-log` yang bisa membantu jika terjadi error yang sama:
+Terkadang terdapat error yang terjadi ketika dilakukan proses ini, dan berikut _error-log_ yang bisa membantu jika terjadi error yang sama:
