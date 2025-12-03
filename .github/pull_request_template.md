@@ -1,27 +1,27 @@
-**Ringkasan**
+### Ringkasan
 
 Jelaskan secara singkat tujuan pull request ini.
 
-**Perubahan Utama**
+### Perubahan Utama
 
 - ...
 - ...
 - ...
 
-**Alasan Perubahan**
+### Alasan Perubahan
 
 Jelaskan mengapa perubahan ini diperlukan.
 
-**Cara Pengujian**
+### Cara Pengujian
 
 Jelaskan langkah singkat untuk menguji perubahan ini.
 
-**Checklist**
+### Checklist
 
 - [ ] Kode telah diuji
 - [ ] Tidak ada kredensial atau data sensitif yang ikut terbawa
 - [ ] Dokumentasi diperbarui (jika diperlukan)
 
-**Catatan Tambahan**
+### Catatan Tambahan
 
 Tambahkan informasi lain bila diperlukan.
