@@ -18,10 +18,31 @@ Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini
 
     Pilih projek manager Maven, setelah itu tentukan nama projek yang ingin digunakan, sesuai dengan projek yang ingin dibuat. Setelah itu, pada bagian Catalog, pilih `Maven Central`. Pada bagian Advanced Settings, jika ingin membuat penamaan custom, bisa isi groudID, artifactID, dan Version secara manual. 
 
-> [!CAUTION]
+> [!TIP]
 > Jika belum terlalu paham bagaimana sturktur folder dan cara kerja Maven, maka bagian Advanced Settings yang berisi groupID, artifactID, dan Version tidak perlu diutak-atik. Cukup bagian projek manager, nama projek, dan Catalog.    
 
-2. Setelah projek baru berhasil dibuat, lihat pada bagian daftar folder, tepatnya di root folder. Akan terdapat sebuah file yang bernama `pom.xml`. Di file inilah kita akan mengkonfigurasi bagaimana Maven seharusnya bekerja. Selanjutnya,  hal yang perlu kita lakukan adalah memasang beberapa dependency yang dibutuhkan, antara lain:
+2. Pasang dan Enabled plugin Maven, yang bisa dicari didaftar plugin Intellij:
+
+    ![plugin-maven.png](media/plugin-maven.png)
+
+    Ini penting supaya kedepanya integrasi dan sinkronisasi dependency Maven bisa dilakukan dengan sekali klik.
+
+> [!CAUTION]
+> Jika kamu melakukan `clone` pada repository yang sudah dikelola dengan Maven (terdapat file `pom.xml` di root folder), maka cukup lakukan integrasi Maven pada IDE saja! Artinya cukup ikuti arahan yang diberikan dibawah (no 3), dan tidak perlu lanjut kebawah!
+> 
+> Tapi jika projek yang dibuat adalah baru, maka langsung lompat ke step 4!
+
+3. Jika projek yang ingin diintegrasikan dari maven sudah dikelola oleh Maven, misal kamu melakukan `clone` pada repository yang berisi projek Java yang sudah dikelola oleh Maven, maka yang perlu kamu lakukan adalah sekedar melakukan integrasi Maven saja.
+
+    Caranya mudah, ikuti step berikut:
+   1. Pastikan plugin Maven diatas sudah terpasang.
+   2. Cari file yang bernama `pom.xml` di root folder. Pastikan file ini ada di root folder, karena ini menjadi penanda utama bahwa projek ini dikelola dengan Maven.
+
+   3. Klik kanan pada file tersebut, lalu pilih opsi `Maven` -> `Add as Maven Project`. Kadang juga ada yang langsung menampilkan opsi `Add as Maven Project`, itu juga bisa langsung di klik. 
+   4. Tahap terakhir adalah pemeriksaan, pastikan di panel kanan terdapat icon **M**, yaitu icon Maven muncul. Lalu proses downloading akan berlangsung, bisa dilihat dikanan bawah jendela Intellij. Dan terakhir, terbentuk folder bernama `target`.
+   5. Jika tahap terakhir sudah terlihat di jendela IDE, maka artinya integrasi Maven berhasil dilakukan.
+
+4. Setelah projek baru berhasil dibuat, lihat pada bagian daftar folder, tepatnya di root folder. Akan terdapat sebuah file yang bernama `pom.xml`. Di file inilah kita akan mengkonfigurasi bagaimana Maven seharusnya bekerja. Selanjutnya,  hal yang perlu kita lakukan adalah memasang beberapa dependency yang dibutuhkan, antara lain:
     - [JavaFX Controls](https://mvnrepository.com/artifact/org.openjfx/javafx-controls) - Digunakan untuk mendapatkan komponen UI seperti Button, TextField, Label, dll. Ini yang paling sering dipakai. Salah satu dependency yang bisa dipasang mungkin seperti ini (yang berasal dari versi terbaru):
 
         ```xml
@@ -67,7 +88,7 @@ Untuk bisa menggunakan JavaFX, maka kita perlu memasang library dari JavaFX. Ini
 
     - Beberapa dependency yang bisa dipasang, namun bersifat opsional, antara lain seperti: [javafx-media](https://mvnrepository.com/artifact/org.openjfx/javafx-media), [javafx-web](https://mvnrepository.com/artifact/org.openjfx/javafx-web), [javafx-swing](https://mvnrepository.com/artifact/org.openjfx/javafx-swing), [javafx-swt](https://mvnrepository.com/artifact/org.openjfx/javafx-swt).
 
-3. Setelah memasang semua dependency yang dibutuhkan, maka daftar dependency yang kita punya mungkin menjadi seperti ini:
+5. Setelah memasang semua dependency yang dibutuhkan, maka daftar dependency yang kita punya mungkin menjadi seperti ini:
 
     ```xml
     <dependencies>
