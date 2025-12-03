@@ -173,7 +173,7 @@ Plugin-plugin ini digunakan untuk menjalankan JavaFX langsung dari Maven, serta 
     ```
 
 > [!CAUTION]
-> Masing-masing dari plugin diatas perlu konfigurasi tambahan, yang akan dibahas di [konfigurasi final](https://github.com/trihajikhr/javafx-sandbox/blob/main/doc/konfigurasi-awal.md#konfigurasi-pomxml-final)
+> Masing-masing dari plugin diatas perlu konfigurasi tambahan, yang akan dibahas di [konfigurasi final](#konfigurasi-pomxml-final).
 
 Sekarang perhatikan bahwa ketiga plugin tersebut dibungkus oleh blok `<dependency>`. Tapi karena kita membutuhkan dependency diatas sebagai plugin, maka ganti blok tersebut menjadi `<plugin>`. Ini karena Maven Repo tidak bisa membedakan apakah sebuah artifact itu akan digunakan sebagai dependency, plugin, exstension, atau tool lain, sehingga kita harus menggantinya secara manual.
 
