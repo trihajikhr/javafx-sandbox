@@ -8,9 +8,10 @@ import javafx.stage.Stage;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/database.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/daftar.fxml"));
+        Database.getInstance();
         stage.setScene(new Scene(loader.load()));
-        stage.setTitle("Anggota teamku!");
+        stage.setTitle("Percobaaan SQLite!");
         stage.show();
     }
 

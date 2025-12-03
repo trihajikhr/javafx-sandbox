@@ -4,32 +4,83 @@
     <mappings />
     <preferences />
   </component>
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
-    <assistants />
+    <assistants>
+      <assistant-state connection-id="b9a066f4-ad99-433c-b8d1-8d20fd3e57b6" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+        <conversations />
+      </assistant-state>
+      <assistant-state connection-id="abdca338-47a7-4c0f-9c49-ae459cb0278d" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+        <conversations />
+      </assistant-state>
+      <assistant-state connection-id="2edd19d0-13a1-461b-b763-558bc0083572" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+        <conversations />
+      </assistant-state>
+      <assistant-state connection-id="9db60ab6-3af7-4274-b83b-a2dfe79ce1fe" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+        <conversations />
+      </assistant-state>
+      <assistant-state connection-id="951f550e-d92c-4a34-baa3-79a3846a5ec5" default-profile-name="" selected-conversation-id="" assistant-type="GENERIC" availability="UNAVAILABLE" acknowledgement="NONE">
+        <conversations />
+      </assistant-state>
+    </assistants>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="9db60ab6-3af7-4274-b83b-a2dfe79ce1fe">
-      <console name="database" type="STANDARD" schema="main" session="Main" />
+    <connection id="951f550e-d92c-4a34-baa3-79a3846a5ec5">
+      <console name="data" type="STANDARD" schema="main" session="Main"><![CDATA[create table mahasiswa (
+    id_user integer primary key not null,
+    nama varchar,
+    gmail varchar unique 
+);]]></console>
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="951f550e-d92c-4a34-baa3-79a3846a5ec5" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="951f550e-d92c-4a34-baa3-79a3846a5ec5" dataset="main.mahasiswa" active-filter-id="" />
+    <filter-actions connection-id="951f550e-d92c-4a34-baa3-79a3846a5ec5" dataset="main.produk" active-filter-id="" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <execution-variables-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
     <filters />
   </component>
+  <component name="DBNavigator.Project.ScriptExecutionManager" clear-outputs="true">
+    <recently-used-interfaces>
+      <mapping database-type="SQLITE" interface-id="DEFAULT" />
+    </recently-used-interfaces>
+  </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection source-id="" id="9db60ab6-3af7-4274-b83b-a2dfe79ce1fe" active="true" signed="true">
+      <connection source-id="" id="951f550e-d92c-4a34-baa3-79a3846a5ec5" active="true" signed="true">
         <database>
-          <name value="database" />
+          <name value="data" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
@@ -47,7 +98,7 @@
           <protocol value="" />
           <url-parameters />
           <files>
-            <file path="sqlite.db" schema="main" />
+            <file path="D:\Github-Grinder\Java\javafx-sandbox\src\main\resources\database\data.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
@@ -477,7 +528,9 @@
         <prompt-execution value="false" />
       </statement-execution>
       <script-execution>
-        <command-line-interfaces />
+        <command-line-interfaces>
+          <value id="ef90fb7f-af7b-4770-bc9e-e4dec3a34391" name="SQLite terminal" executable-path="$PROJECT_DIR$/src/main/resources/database/data.sql" database-type="SQLITE" />
+        </command-line-interfaces>
         <execution-timeout value="300" />
       </script-execution>
       <method-execution>
@@ -559,5 +612,9 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+    <execution-variable-types />
   </component>
 </project>
