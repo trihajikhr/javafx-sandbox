@@ -1,9 +1,10 @@
 # ⚓ AnchorPane di JavaFX
 
-<p align="center">
-  <img src="media/anchorpane-demo.gif" height="200">
-  <img src="media/anchorpane-config-demo.gif" height="200">
-</p>
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/anchorpane-demo.gif" style="height: 400px;">
+  <img src="media/anchorpane-config-demo.gif" style="height: 400px;">
+</div>
+
 
 **`AnchorPane`** adalah salah satu kontainer tata letak (Layout Pane) yang paling sederhana dan paling fleksibel di JavaFX. Fungsinya adalah untuk **menambatkan** atau **mengunci** posisi sebuah Node (komponen UI, seperti tombol atau bidang teks) relatif terhadap sisi (tepi) kontainernya sendiri.
 
