@@ -5,16 +5,17 @@
   <img src="media/anchorpane-config-demo.gif" style="height: 400px;">
 </div>
 
+<br/>
 
 **`AnchorPane`** adalah salah satu kontainer tata letak (Layout Pane) yang paling sederhana dan paling fleksibel di JavaFX. Fungsinya adalah untuk **menambatkan** atau **mengunci** posisi sebuah Node (komponen UI, seperti tombol atau bidang teks) relatif terhadap sisi (tepi) kontainernya sendiri.
 
-Pada demo di atas, bagian kiri memperlihatkan cara kerja `AnchorPane`, misalnya bagaimana sebuah `Button` bisa tetap menempel pada tepi container. Setiap node yang berada di dalam `AnchorPane` memiliki aturan layout tersendiri, di mana posisinya dapat diatur berdasarkan sisi-sisi `AnchorPane`. Sementara itu, video di sebelah kanan menampilkan konfigurasi layout yang digunakan untuk mencapai posisi tersebut.
+Pada demo di atas, bagian kiri memperlihatkan cara kerja `AnchorPane`, misalnya bagaimana sebuah `Button` bisa tetap menempel pada tepi container. Setiap node yang berada di dalam `AnchorPane` memiliki aturan layout tersendiri, di mana posisinya dapat diatur berdasarkan sisi-sisi `AnchorPane`. Sementara itu, video di sebelah kanan menampilkan konfigurasi layout yang digunakan untuk mencapai posisi tersebut pada Scene Builder.
 
 ## 1. Konsep Dasar
 
-Berbeda dengan `VBox` atau `GridPane` yang mengatur elemen secara otomatis, `AnchorPane` memberikan Anda **kontrol mutlak** atas posisi setiap Node anak.
+Berbeda dengan `VBox` atau `GridPane` yang mengatur elemen secara otomatis, `AnchorPane` memberikan Anda **kontrol mutlak** atas posisi setiap child Node.
 
-* **Penambatan (Anchoring)**: Anda mendefinisikan jarak yang harus dipertahankan oleh Node anak dari tepi kontainer `AnchorPane` (Top, Bottom, Left, Right).
+* **Penambatan (Anchoring)**: Anda mendefinisikan jarak yang harus dipertahankan oleh child Node dari tepi kontainer `AnchorPane` (Top, Bottom, Left, Right).
 * **Properti Static**: Jarak penambatan ini ditetapkan menggunakan properti static, misalnya:
     * `AnchorPane.setTopAnchor(node, value)`
     * `AnchorPane.setRightAnchor(node, value)`
@@ -39,6 +40,12 @@ Perilaku utama yang membedakan `AnchorPane` terlihat saat jendela (Stage) diubah
 * **Header atau Footer**: Menempatkan tombol "Simpan" atau "Batal" di sudut **kanan bawah** yang selalu mempertahankan jarak yang sama dari tepi bawah dan kanan, terlepas dari ukuran jendela.
 * **Background Utama**: Sering digunakan sebagai root pane (panel utama) karena kemampuannya untuk **meregangkan konten tunggal** (misalnya, `BorderPane` atau `SplitPane`) untuk mengisi seluruh jendela dengan menambatkannya di keempat sisi.
 
+> [!TIP]
+> Gunakan `AnchorPane` ketika Anda ingin **mengunci** komponen pada posisi tertentu relatif terhadap tepi kontainer, terutama jika komponen tersebut harus **meregang** saat jendela diubah ukurannya.
+
 ---
 
-Singkatnya, gunakan `AnchorPane` ketika Anda ingin **mengunci** komponen pada posisi tertentu relatif terhadap tepi kontainer, terutama jika komponen tersebut harus **meregang** saat jendela diubah ukurannya.
+Source:
+- [AnchorPane Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/AnchorPane.html)
+- [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-anchorpane-class/)
+- [Gemini AI](https://gemini.google.com/app)
