@@ -1,6 +1,6 @@
 # 📚 Accordion di JavaFX
 
-![accordion-demo.mp4](media/accordion-demo.mp4)
+![accordion-demo.gif](media/accordion-demo.gif)
 
 **`Accordion`** adalah komponen kontrol (yang berfungsi sebagai kontainer) khusus di JavaFX yang dirancang untuk menampilkan daftar panel yang dapat dibuka dan ditutup, yang dikenal sebagai **`TitledPane`**.
 
