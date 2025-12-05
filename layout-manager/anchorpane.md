@@ -45,7 +45,4 @@ Perilaku utama yang membedakan `AnchorPane` terlihat saat jendela (Stage) diubah
 
 ---
 
-Source:
-- [AnchorPane Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/AnchorPane.html)
-- [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-anchorpane-class/)
-- [Gemini AI](https://gemini.google.com/app)
+Source: [AnchorPane Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/AnchorPane.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-anchorpane-class/) | [Gemini AI](https://gemini.google.com/app)
