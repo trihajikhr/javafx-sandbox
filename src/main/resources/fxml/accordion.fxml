@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<Accordion maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="controllers.Control">
+  <panes>
+    <TitledPane animated="false" text="Bagaimana caranya menjadi programmer yang hebat?">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="232.0" layoutY="139.0" prefHeight="324.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextArea editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Untuk bisa menjadi programmer yang hebat, kita perlu belajar setiap hari, dan memegang satu kata kunci ini: &quot;Kamu tidak sedang belajar pemrograman selama jarimu tidak sedang berada diatas keyboard!&quot;" wrapText="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="Bagaimana caranya belajar yang efisien?">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="108.0" layoutY="87.0" prefHeight="324.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextArea editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Untuk bisa belajar dengan dengan baik dan cepat, kita perlu melakukan peningkatan setiap hari, dengan cara mendeteksi bagian mana yang bisa dipercepat dan diefisiensikan. Ini berguna supaya kita bisa mendapat banyak materi, dengan waktu yang lebih singkat!" wrapText="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane animated="false" text="Apa aku perlu berkumpul dengan komunitas?">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="90.0" layoutY="162.0" prefHeight="324.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TextArea editable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" text="Jika komunitas itu bisa membuatmu belajar lebih cepat, dan mengajarkan banyak materi baru yang belum kamu kenali, maka itu bagus. Tapi jika komunitas itu hanya lebih banyak bersenang-senang saja, maka lebih baik belajR sendiri saja, itu jauh lebih baik!" wrapText="true" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+      </content>
+    </TitledPane>
+  </panes>
+</Accordion>
