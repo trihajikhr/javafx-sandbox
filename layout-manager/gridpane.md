@@ -1,8 +1,8 @@
 # 📐 GridPane di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/gridpane-1.png" style="height: 300px;">
-  <img src="media/gridpane-2.png" style="height: 300px;">
+  <img src="media/gridpane-1.png" style="height: 400px;">
+  <img src="media/gridpane-2.png" style="height: 400px;">
 </div>
 
 <br/>

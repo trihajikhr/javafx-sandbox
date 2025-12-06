@@ -1,7 +1,7 @@
 # 🎛️ ButtonBar di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/buttonbar-demo.gif" style="height: 300px;">
+  <img src="media/buttonbar-demo.gif" style="height: 500px;">
 </div>
 
 <br/>

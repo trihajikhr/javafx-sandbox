@@ -1,7 +1,7 @@
 # 🧱 Pane di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/pane.png" style="height: 300px;">
+  <img src="media/pane.png" style="height: 500px;">
 </div>
 
 <br/>
