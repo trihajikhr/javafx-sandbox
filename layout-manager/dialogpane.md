@@ -1,8 +1,8 @@
 # 💬 DialogPane di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/dialogpane-1.png" style="height: 300px;">
-  <img src="media/dialogpane-2.png" style="height: 300px;">
+  <img src="media/dialogpane-1.png" style="height: 200px;">
+  <img src="media/dialogpane-2.png" style="height: 200px;">
 </div>
 
 <br/>
