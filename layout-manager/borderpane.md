@@ -9,6 +9,8 @@
 
 **`BorderPane`** adalah kontainer yang paling sering digunakan sebagai tata letak utama (root layout) aplikasi, karena ia membagi ruang menjadi **lima wilayah fungsional** yang berbeda.
 
+Pada video demo bagian kiri, ditampilkan bagaimana semisal kita membuat tampilan aplikasi menggunakan `BorderPane`. Sedangkan pada bagian kanan, adalah bagaimana tampilan `BorderPane` ketika sedang dibuat di Scene Builder.
+
 ## 1. Konsep Dasar
 
 * **Pembagian Wilayah**: `BorderPane` dirancang untuk mengatur hingga lima child Node, masing-masing ditempatkan di salah satu dari lima posisi tetap: **Atas (`Top`), Bawah (`Bottom`), Kiri (`Left`), Kanan (`Right`), dan Tengah (`Center`)**.
