@@ -8,36 +8,6 @@
 
 **`ButtonBar`** adalah kontainer tata letak khusus yang dirancang semata-mata untuk menampung dan mengatur **tombol-tombol (`Button`)** secara konsisten sesuai dengan standar pedoman desain platform (seperti Windows, macOS, atau Linux), terutama untuk tombol yang berada di bagian bawah dialog atau form.
 
-Untuk video demo diatas, digunakan kode FXML berikut:
-
-```fxml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.geometry.Insets?>
-
-<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" spacing="15" alignment="CENTER">
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20" />
-    </padding>
-
-    <Label text="Apakah Anda yakin ingin menyimpan perubahan ini?" />
-
-    <ButtonBar>
-        <buttons>
-            <Button text="Bantuan" ButtonBar.buttonData="HELP" />
-
-            <Button text="Batal" ButtonBar.buttonData="CANCEL_CLOSE" />
-
-            <Button text="Simpan" ButtonBar.buttonData="APPLY" />
-        </buttons>
-    </ButtonBar>
-</VBox>
-```
-
 ## 1. Konsep Dasar
 
 * **Fokus Tombol**: `ButtonBar` hanya boleh menampung Node yang merupakan tombol (`Button`). Ia akan mengabaikan Node lain (walaupun secara teknis bisa ditambahkan) dan berfokus pada penataan tombol.
@@ -66,4 +36,4 @@ Untuk video demo diatas, digunakan kode FXML berikut:
 > `ButtonBar` adalah kontainer yang **praktis** untuk mengelola tata letak tombol aksi agar sesuai dengan **pedoman desain OS**, menghilangkan kebutuhan untuk mengatur urutan dan perataan secara manual menggunakan `HBox` atau `GridPane`.
 
 ---
-Source: [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_buttonbar.htm) | [Oracle ButtonBar](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ButtonBar.html)
+Source: [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_buttonbar.htm) | [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ButtonBar.html)

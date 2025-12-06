@@ -1,8 +1,8 @@
 # ⚓ AnchorPane di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/anchorpane-demo.gif" style="height: 400px;">
-  <img src="media/anchorpane-config-demo.gif" style="height: 400px;">
+  <img src="media/anchorpane-demo.gif" style="height: 300px;">
+  <img src="media/anchorpane-config-demo.gif" style="height: 300px;">
 </div>
 
 <br/>
@@ -45,4 +45,4 @@ Perilaku utama yang membedakan `AnchorPane` terlihat saat jendela (Stage) diubah
 
 ---
 
-Source: [AnchorPane Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/AnchorPane.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-anchorpane-class/) | [Gemini AI](https://gemini.google.com/app)
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/AnchorPane.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-anchorpane-class/) | [Gemini AI](https://gemini.google.com/app)

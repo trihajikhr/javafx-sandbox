@@ -1,7 +1,7 @@
 # 📚 Accordion di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/accordion-demo.gif" style="height: 400px;">
+  <img src="media/accordion-demo.gif" style="height: 300px;">
 </div>
 
 <br/>
@@ -30,6 +30,8 @@ Perilaku utama yang mendefinisikan `Accordion` adalah:
 * **Menu Pengaturan (Settings Menu)**: Mengelompokkan pengaturan yang berbeda (misalnya, "Akun," "Notifikasi," "Privasi") dalam panel terpisah.
 * **Navigasi/Struktur Data**: Menampilkan kategori produk atau struktur folder.
 
----
+> [!TIP]
+> Dengan kata lain, `Accordion` adalah manajer untuk kumpulan `TitledPane` yang memastikan hanya satu dari mereka yang menjadi fokus pada saat tertentu.
 
-Dengan kata lain, `Accordion` adalah manajer untuk kumpulan `TitledPane` yang memastikan hanya satu dari mereka yang menjadi fokus pada saat tertentu.
+---
+Source: [Gemini AI](https://gemini.google.com/app) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_accordion.htm) | [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Accordion.html)
