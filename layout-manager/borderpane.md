@@ -13,19 +13,19 @@ Pada video demo bagian kiri, ditampilkan bagaimana semisal kita membuat tampilan
 
 ## 1. Konsep Dasar
 
-* **Pembagian Wilayah**: `BorderPane` dirancang untuk mengatur hingga lima child Node, masing-masing ditempatkan di salah satu dari lima posisi tetap: **Atas (`Top`), Bawah (`Bottom`), Kiri (`Left`), Kanan (`Right`), dan Tengah (`Center`)**.
+* **Pembagian Wilayah**: `BorderPane` dirancang untuk mengatur hingga lima Node anak, masing-masing ditempatkan di salah satu dari lima posisi tetap: **Atas (`Top`), Bawah (`Bottom`), Kiri (`Left`), Kanan (`Right`), dan Tengah (`Center`)**.
 * **Hierarki Layout**: Posisi Tengah (`Center`) adalah yang paling penting karena ia secara otomatis akan mengambil sisa ruang yang tersedia setelah keempat wilayah lainnya diukur dan ditempatkan.
-* **Pengaturan Node**: Child Node ditempatkan menggunakan *static methods*, misalnya: `BorderPane.setTop(pane, node)`.
+* **Pengaturan Node**: Node anak ditempatkan menggunakan *static methods*, misalnya: `BorderPane.setTop(pane, node)`.
 
 ## 2. Mekanisme Tata Letak (BorderPane)
 
 Perilaku ukuran ulang (`resizing`) dalam `BorderPane` sangat terstruktur dan mengikuti aturan prioritas:
 
-| Wilayah | Perilaku Horizontal                                                | Perilaku Vertikal                                                                                              |
-| :--- |:-------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| **Top & Bottom** | **Mengisi penuh lebar** kontainer.                                 | Menggunakan **tinggi yang disukai** (`preferred height`) child Node.                                           |
-| **Left & Right** | Menggunakan **lebar yang disukai** (`preferred width`) child Node. | Mengisi sisa ruang **di antara** wilayah Top dan Bottom.                                                       |
-| **Center** | **Mengisi penuh** sisa lebar yang ada.                             | **Mengisi penuh** sisa tinggi yang ada. Node ini **meregang** untuk mengambil semua ruang kosong yang tersisa. |
+| Wilayah | Perilaku Horizontal                                               | Perilaku Vertikal                                                                                              |
+| :--- |:------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| **Top & Bottom** | **Mengisi penuh lebar** kontainer.                                | Menggunakan **tinggi yang disukai** (`preferred height`) Node anak.                                            |
+| **Left & Right** | Menggunakan **lebar yang disukai** (`preferred width`) Node anak. | Mengisi sisa ruang **di antara** wilayah Top dan Bottom.                                                       |
+| **Center** | **Mengisi penuh** sisa lebar yang ada.                            | **Mengisi penuh** sisa tinggi yang ada. Node ini **meregang** untuk mengambil semua ruang kosong yang tersisa. |
 
 * **Penyusutan Otomatis (Collapse)**: Jika Anda tidak menempatkan Node di salah satu wilayah, wilayah tersebut akan **menyusut** dan tidak menggunakan ruang, kecuali untuk wilayah `Center` yang akan meregang untuk mengisi ruang tersebut.
 

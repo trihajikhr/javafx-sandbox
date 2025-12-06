@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.geometry.Insets?>
-<?import javafx.geometry.Orientation?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 
-<FlowPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-          orientation="HORIZONTAL"
-          hgap="10" vgap="10"
-          alignment="TOP_LEFT">
 
-    <padding>
-        <Insets top="20" right="20" bottom="20" left="20" />
-    </padding>
-
-    <Button text="Tombol 1" />
-    <Button text="Tombol 2" />
-    <Button text="Tombol 3" />
-    <Button text="Tombol 4" />
-    <Button text="Tombol 5" />
-    <Button text="Tombol 6" />
-    <Button text="Tombol 7" />
-    <Button text="Tombol 8" />
-    <Button text="Tombol 9" />
-    <Button text="Tombol 10" />
-
-</FlowPane>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button mnemonicParsing="false" prefHeight="88.0" prefWidth="116.0" text="Button" />
+      <CheckBox mnemonicParsing="false" prefHeight="44.0" prefWidth="93.0" text="CheckBox" />
+      <ImageView fitHeight="98.0" fitWidth="168.0" pickOnBounds="true" preserveRatio="true" />
+      <ChoiceBox prefHeight="35.0" prefWidth="96.0" />
+      <ColorPicker prefHeight="66.0" prefWidth="147.0" />
+      <ComboBox prefHeight="51.0" prefWidth="148.0" />
+   </children>
+</HBox>

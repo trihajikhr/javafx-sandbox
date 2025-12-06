@@ -13,9 +13,9 @@ Pada demo di atas, bagian kiri memperlihatkan cara kerja `AnchorPane`, misalnya 
 
 ## 1. Konsep Dasar
 
-Berbeda dengan `VBox` atau `GridPane` yang mengatur elemen secara otomatis, `AnchorPane` memberikan Anda **kontrol mutlak** atas posisi setiap child Node.
+Berbeda dengan `VBox` atau `GridPane` yang mengatur elemen secara otomatis, `AnchorPane` memberikan Anda **kontrol mutlak** atas posisi setiap Node anak.
 
-* **Penambatan (Anchoring)**: Anda mendefinisikan jarak yang harus dipertahankan oleh child Node dari tepi kontainer `AnchorPane` (Top, Bottom, Left, Right).
+* **Penambatan (Anchoring)**: Anda mendefinisikan jarak yang harus dipertahankan oleh Node anak dari tepi kontainer `AnchorPane` (Top, Bottom, Left, Right).
 * **Properti Static**: Jarak penambatan ini ditetapkan menggunakan properti static, misalnya:
     * `AnchorPane.setTopAnchor(node, value)`
     * `AnchorPane.setRightAnchor(node, value)`

@@ -8,6 +8,8 @@
 
 **`HBox`** adalah kontainer tata letak yang paling dasar dan sering digunakan untuk mengatur elemen anak-anaknya (Node) dalam satu baris **horizontal** lurus. Ini sangat ideal untuk membuat bilah alat (*toolbar*) atau baris tombol karena kesederhanaannya dalam menyusun elemen secara berdampingan.
 
+Video demo diatas menampilkan bagaimana `Hbox` secara otomatis meletakan semua Child Node yang ada didalamnya secara horizontal. 
+
 ## 1. Konsep Dasar
 
 * **Tata Letak Baris**: Semua Node yang ditambahkan ke `HBox` akan ditempatkan berurutan dari **kiri ke kanan**.
