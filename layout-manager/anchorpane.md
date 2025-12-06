@@ -1,8 +1,8 @@
 # ⚓ AnchorPane di JavaFX
 
 <div style="display: flex; gap: 10px;" align="center">
-  <img src="media/anchorpane-demo.gif" style="height: 300px;">
-  <img src="media/anchorpane-config-demo.gif" style="height: 300px;">
+  <img src="media/anchorpane-demo.gif" style="height: 350px;">
+  <img src="media/anchorpane-config-demo.gif" style="height: 350px;">
 </div>
 
 <br/>
