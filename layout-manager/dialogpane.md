@@ -39,4 +39,5 @@
 > `DialogPane` adalah kontainer **berbasis tujuan** yang menyediakan **struktur yang konsisten** dan tata letak yang sudah ditentukan sebelumnya untuk membuat *Dialog* aplikasi dengan cepat, mengintegrasikan `ButtonBar` di dalamnya secara otomatis.
 
 ---
-Source: 
+
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/DialogPane.html) | [Tutorialspoint](https://www.tutorialspoint.com/how-to-create-a-dialog-in-javafx) | [Example code](https://github.com/james-d/Dialog-FXML-Example/blob/master/src/DialogTestController.java)
