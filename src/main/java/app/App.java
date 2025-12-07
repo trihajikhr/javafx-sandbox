@@ -10,7 +10,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/layout.fxml"));
         stage.setScene(new Scene(loader.load()));
-        stage.setTitle("Mencoba ScrollPane!");
+        stage.setTitle("Mencoba TitledPane!");
         stage.show();
     }
 

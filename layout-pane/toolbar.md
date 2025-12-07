@@ -1,5 +1,11 @@
 # 🛠️ ToolBar di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/toolbar-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`ToolBar`** adalah kontrol khusus yang berfungsi sebagai kontainer dan dirancang untuk menampung sekumpulan **komponen yang dapat diakses dengan cepat** dan **berfokus pada aksi**, seperti tombol, pemisah (*separator*), *dropdown*, dan bidang teks. Tujuan utamanya adalah menyediakan antarmuka yang terorganisir untuk fungsi yang sering digunakan.
 
 ## 1. Konsep Dasar
@@ -28,7 +34,7 @@ Mekanisme `ToolBar` sangat mirip dengan `HBox`, tetapi dengan beberapa fitur khu
 `ToolBar` adalah komponen utama dalam sebagian besar antarmuka aplikasi:
 
 * **Bilah Alat Utama**: Ditempatkan di wilayah `Top` dari `BorderPane` untuk menampung fungsi utama yang berlaku untuk seluruh aplikasi.
-* **Bilah Alat Editor**: Dalam editor teks atau kode, `ToolBar` menampung tombol-tombol format (misalnya, **B** *old*, *I talic*, *Underline*).
+* **Bilah Alat Editor**: Dalam editor teks atau kode, `ToolBar` menampung tombol-tombol format (misalnya, *Bold*, *Italic*, *Underline*).
 * **Sidebar Vertikal**: Menggunakan `orientation="VERTICAL"` di wilayah `Left` atau `Right` dari `BorderPane` untuk menampung alat dan ikon.
 
 > [!TIP]
@@ -36,4 +42,4 @@ Mekanisme `ToolBar` sangat mirip dengan `HBox`, tetapi dengan beberapa fitur khu
 
 ---
 
-Source:
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/ToolBar.html) | [Jenkov](https://jenkov.com/tutorials/javafx/toolbar.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-toolbar-class/) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_toolbar.htm)

@@ -1,5 +1,11 @@
 # ↕️ VBox di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/vbox-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`VBox`** adalah kontainer tata letak yang paling sederhana dan paling sering digunakan untuk mengatur elemen anak-anaknya (Node) dalam satu kolom **vertikal** lurus. Ini sangat ideal untuk membuat bilah sisi (*sidebar*) atau tumpukan elemen formulir karena kesederhanaannya dalam menyusun elemen dari atas ke bawah.
 
 ## 1. Konsep Dasar
@@ -41,4 +47,4 @@ Node anak di dalam `VBox` secara *default* akan **meregang secara horizontal** (
 
 ---
 
-Source:
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/VBox.html) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_vbox_layout.htm) | [GeeksoforGeeks](https://www.geeksforgeeks.org/java/javafx-vbox-class/) | [Jenkov](https://jenkov.com/tutorials/javafx/vbox.html)

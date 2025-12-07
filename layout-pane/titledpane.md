@@ -1,5 +1,11 @@
 # 🗃️ TitledPane di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/titledpane-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`TitledPane`** adalah kontrol yang berfungsi sebagai kontainer dan dirancang untuk menampung konten tunggal di bawah **judul** atau **header** yang dapat diinteraksi. Fitur utamanya adalah kemampuannya untuk **menyembunyikan** (menciutkan/ *collapse*) atau **menampilkan** (mengembangkan/ *expand*) kontennya dengan mengklik judul tersebut.
 
 ## 1. Konsep Dasar
@@ -36,4 +42,4 @@ Perilaku `TitledPane` terutama berkaitan dengan manajemen status tampilan dan in
 
 ---
 
-Source: 
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TitledPane.html) | [Jenkov](https://jenkov.com/tutorials/javafx/titledpane.html) | [Tutorialspoint](https://www.tutorialspoint.com/how-to-create-titled-pane-using-javafx)
