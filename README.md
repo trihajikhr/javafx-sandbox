@@ -65,15 +65,7 @@ Untuk dokumentasi resmi dan materi pembelajaran yang lebih mendalam, silakan kun
 - [JavaFX Official Documentation](https://openjfx.io/) - Tautan ke dokumentasi resmi JavaFX
 - [OpenJFX GitHub](https://github.com/openjdk/jfx) - Tautan ke repo github OpenJFX
 
-### Layout Manager
-Bagian ini menyajikan panduan terperinci dan terstruktur mengenai setiap Layout Pane (Kontainer) utama dalam JavaFX. Dokumentasi ini berfokus pada mekanisme tata letak unik dari masing-masing kontainer, membantu Anda memilih alat yang tepat untuk kebutuhan desain antarmuka pengguna (UI) Anda.
-
-Setiap entri kontainer dirancang dengan format yang konsisten (`Konsep Dasar`, `Mekanisme Tata Letak`, dan `Kasus Penggunaan Populer`) untuk memudahkan perbandingan dan referensi cepat.
-
-Tentu! Berdasarkan urutan file yang Anda berikan, berikut adalah tabel referensi Layout Manager JavaFX untuk sub-bagian README Anda, lengkap dengan deskripsi fungsional dan fokus utama yang ringkas.
-
-## 🛠️ Layout Manager JavaFX: Panduan dan Referensi Kontainer
-
+### Layout Manager JavaFX
 Bagian ini menyajikan **panduan terperinci** dan **terstruktur** mengenai setiap *Layout Pane* (Kontainer) utama dalam JavaFX. Dokumentasi ini berfokus pada **mekanisme tata letak unik** dari masing-masing kontainer, membantu Anda memilih alat yang tepat untuk kebutuhan desain antarmuka pengguna (UI) Anda.
 
 Setiap entri kontainer dirancang dengan format yang konsisten (`Konsep Dasar`, `Mekanisme Tata Letak`, dan `Kasus Penggunaan Populer`) untuk memudahkan perbandingan dan referensi cepat.
