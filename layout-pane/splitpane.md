@@ -1,5 +1,11 @@
 # 🪟 SplitPane di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/splitpane-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`SplitPane`** adalah kontainer yang dirancang untuk menampung **dua atau lebih Node** dan membaginya dengan menggunakan **pembagi yang dapat diseret** (*draggable divider*). Kontainer ini memungkinkan pengguna untuk secara dinamis mengubah ukuran Node anak saat *runtime*, menjadikannya ideal untuk tata letak yang menampilkan beberapa panel berdampingan.
 
 ## 1. Konsep Dasar
@@ -41,4 +47,4 @@ Node anak di dalam `SplitPane` memiliki properti khusus:
 
 ---
 
-Source: 
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/SplitPane.html) | [Jenkov](https://jenkov.com/tutorials/javafx/splitpane.html) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_splitpane.htm)

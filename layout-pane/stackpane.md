@@ -1,5 +1,11 @@
 # 📄 StackPane di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/stackpane-1.png" style="height: 500px;">
+</div>
+
+<br/>
+
 **`StackPane`** adalah kontainer tata letak yang dirancang untuk mengatur semua Node anak-anaknya **satu di atas yang lain**, menumpuknya (stacking) di lokasi yang sama secara **pusat (tengah)**. Kontainer ini sangat berguna untuk menampilkan satu Node pada satu waktu atau untuk melapisi elemen (seperti teks di atas gambar).
 
 ## 1. Konsep Dasar
@@ -38,4 +44,4 @@ Meskipun *default*-nya adalah pusat, Anda dapat mengatur perataan Node individua
 
 ---
 
-Source: 
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/StackPane.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-stackpane-class/) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/layout_stackpane.htm)
