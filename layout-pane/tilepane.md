@@ -1,5 +1,11 @@
 # 🧱 TilePane di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/tilepane-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`TilePane`** adalah kontainer tata letak yang dirancang untuk mengatur semua Node anak-anaknya dalam **ubin** (*tile*) yang **seragam ukurannya**. Kontainer ini berusaha menampung ubin sebanyak mungkin dalam satu baris atau kolom sebelum membungkus ke yang berikutnya, mirip dengan `FlowPane`, tetapi dengan ukuran sel yang kaku.
 
 ## 1. Konsep Dasar
@@ -38,4 +44,4 @@ Mekanisme `TilePane` berputar pada keseragaman dan pembungkusan:
 
 ---
 
-Source:
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/layout/TilePane.html) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_tilepane_layout.htm) | [Jenkov](https://jenkov.com/tutorials/javafx/tilepane.html)

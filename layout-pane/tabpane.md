@@ -1,5 +1,11 @@
 # 📑 TabPane di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/tabpane-demo.gif" style="height: 500px;">
+</div>
+
+<br/>
+
 **`TabPane`** adalah kontrol yang berfungsi sebagai kontainer tingkat tinggi (bukan *layout pane* murni) yang dirancang untuk menampung banyak area konten di lokasi yang sama, namun hanya **satu** yang dapat dilihat pada satu waktu. Setiap area konten ini diakses melalui **Tab** (tabulasi) yang sesuai.
 
 ## 1. Konsep Dasar
@@ -41,4 +47,4 @@ Anda dapat mengontrol di mana barisan tab diletakkan relatif terhadap konten men
 
 ---
 
-Source: 
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/TabPane.html) | [Jenkov](https://jenkov.com/tutorials/javafx/tabpane.html) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_tabpane.htm) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-tabpane-class/)

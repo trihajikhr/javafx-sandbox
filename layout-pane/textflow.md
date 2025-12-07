@@ -1,5 +1,12 @@
 # 📝 TextFlow di JavaFX
 
+<div style="display: flex; gap: 10px;" align="center">
+  <img src="media/textflow-1.png" style="height: 300px;">
+  <img src="media/textflow-2.png" style="height: 300px;">
+</div>
+
+<br/>
+
 **`TextFlow`** adalah kontainer tata letak khusus di JavaFX yang dirancang untuk menampilkan urutan **Node teks** (seperti `Text`, `Label`, atau bahkan `ImageView` dan `Button` di antara teks) yang **mengalir** dan **membungkus** (*wrap*) seperti sebuah paragraf teks standar.
 
 ## 1. Konsep Dasar
@@ -36,9 +43,9 @@ Properti **`lineSpacing`** memungkinkan Anda mengatur jarak vertikal antar baris
 * **Konten Legal atau Perjanjian**: Menampilkan teks dengan format yang sangat spesifik, di mana perubahan gaya atau elemen lain harus mengikuti aliran baris.
 
 
-> [TIP]
+> [!TIP]
 > **`TextFlow`** adalah kontainer yang berharga untuk mengelola tampilan **teks dengan gaya campuran dan elemen tertanam** yang harus tetap mengikuti aturan **aliran dan pembungkusan paragraf** standar.
 
 ---
 
-Source:
+Source: [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/text/TextFlow.html) | [GeeksforGeeks](https://www.geeksforgeeks.org/java/javafx-textflow-class/) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_textflow_layout.htm)
