@@ -6,32 +6,40 @@
 
 <br/>
 
-**`Accordion`** adalah komponen kontrol (yang berfungsi sebagai kontainer) khusus di JavaFX yang dirancang untuk menampilkan daftar panel yang dapat dibuka dan ditutup, yang dikenal sebagai **`TitledPane`**.
+**`Accordion`** adalah komponen kontrol khusus di JavaFX yang dirancang untuk menampung dan mengelola koleksi Node anak yang disebut **`TitledPane`** (panel berjudul). Fungsinya adalah menyajikan informasi berlapis secara ringkas, di mana **hanya satu panel yang diizinkan untuk terbuka** pada satu waktu.
 
-## 1. Fungsi Utama
+## 1. Konsep Dasar
 
-`Accordion` sangat berguna untuk menyajikan sejumlah besar informasi yang dikelompokkan atau bersifat hierarkis secara **ringkas** dan **hemat ruang**.
+* **Item Anak Khusus**: Tidak seperti kontainer lain, anak `Accordion` harus berupa **`TitledPane`**. Setiap `TitledPane` bertindak sebagai wadah untuk konten sesungguhnya.
+* **Manajemen Ruang**: Ideal untuk menghemat ruang vertikal karena hanya sebagian kecil konten yang ditampilkan, sementara sisanya tersembunyi.
+* **Komponen Induk**: `Accordion` secara otomatis mengontrol status `expanded` (kembang) dari setiap `TitledPane` di dalamnya.
 
-## 2. Komponen Kunci (`TitledPane`)
+## 2. Mekanisme Tata Letak (Accordion)
 
-* **`TitledPane`**: Setiap item dalam `Accordion` adalah sebuah `TitledPane`. Ini adalah kontainer dengan **judul** (title) dan area konten yang dapat disembunyikan atau ditampilkan.
-* **Konten**: Anda dapat menempatkan kontainer lain (seperti `VBox`, `GridPane`, atau bahkan `ListView`) di dalam setiap `TitledPane` untuk mengatur isinya.
+Mekanisme `Accordion` unik karena ia berfokus pada manajemen status dan eksklusivitas, bukan penempatan spasial murni:
 
-## 3. Perilaku Unik
+### A. Eksklusivitas (Hanya Satu Buka)
+* **Perilaku Kunci**: Ketika pengguna mengembangkan sebuah `TitledPane`, `Accordion` secara otomatis mencari `TitledPane` mana pun yang sedang terbuka dan **mencutkannya** (*collapsing*).
+* **Keuntungan**: Ini memaksa fokus pengguna pada satu bagian konten, mengurangi kepadatan informasi.
 
-Perilaku utama yang mendefinisikan `Accordion` adalah:
+### B. Pengelolaan Tinggi (*Height Management*)
+* **Tinggi Dinamis**: Tinggi total `Accordion` akan secara dinamis menyesuaikan diri untuk mengakomodasi tinggi dari `TitledPane` yang **saat ini sedang terbuka**.
+* **Ketinggian *TitledPane***: Node konten di dalam `TitledPane` akan menggunakan tinggi yang disukai, dan `Accordion` akan mengatur tata letaknya sesuai dengan tinggi tersebut.
 
-1.  **Eksklusivitas**: **Hanya satu** `TitledPane` yang diizinkan untuk terbuka (mengembang/expanded) pada waktu tertentu.
-2.  **Otomatisasi**: Ketika pengguna mengklik judul panel lain untuk membukanya, `TitledPane` yang sebelumnya terbuka akan secara otomatis **tertutup** (menciut/collapsed).
+### C. Pengaturan *TitledPane*
+* Meskipun Node anak (`TitledPane`) diletakkan di dalam `Accordion` secara vertikal, pengembang biasanya hanya perlu peduli tentang **urutan** penambahan mereka, bukan posisinya yang spesifik.
 
-## 4. Contoh Penggunaan
+## 3. Kasus Penggunaan Populer
 
-* **FAQ (Frequently Asked Questions)**: Setiap pertanyaan adalah judul `TitledPane`, dan jawabannya ada di dalam konten.
-* **Menu Pengaturan (Settings Menu)**: Mengelompokkan pengaturan yang berbeda (misalnya, "Akun," "Notifikasi," "Privasi") dalam panel terpisah.
-* **Navigasi/Struktur Data**: Menampilkan kategori produk atau struktur folder.
+`Accordion` sangat efektif untuk mengatur informasi yang terfragmentasi atau bertahap:
+
+* **FAQ (Frequently Asked Questions)**: Setiap pertanyaan adalah judul `TitledPane`, dan jawabannya adalah konten, memastikan hanya satu jawaban yang dilihat pada saat bersamaan.
+* **Menu Pengaturan Bertingkat**: Mengelompokkan pengaturan aplikasi ke dalam kategori yang jelas (misalnya, Jaringan, Akun, Tampilan) di *sidebar*.
+* **Alur Kerja Bertahap (Step-by-Step)**: Menyajikan tahapan dalam proses, di mana pengguna harus menyelesaikan atau melihat satu tahapan sebelum melanjutkan.
 
 > [!TIP]
-> Dengan kata lain, `Accordion` adalah manajer untuk kumpulan `TitledPane` yang memastikan hanya satu dari mereka yang menjadi fokus pada saat tertentu.
+> **`Accordion`** adalah kontrol kontainer yang menyediakan solusi **hemat ruang** dan **terorganisir** untuk menyajikan banyak `TitledPane`, dengan mekanisme utama yang memastikan **hanya satu bagian informasi** yang menjadi fokus pada waktu tertentu.
 
 ---
+
 Source: [Gemini AI](https://gemini.google.com/app) | [Tutorialspoint](https://www.tutorialspoint.com/javafx/javafx_accordion.htm) | [Oracle](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/control/Accordion.html)
