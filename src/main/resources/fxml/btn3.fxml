@@ -24,7 +24,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/style.css">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/envi.css">
                <GridPane.margin>
                   <Insets bottom="5.0" left="10.0" right="5.0" top="10.0" />
                </GridPane.margin>
@@ -39,7 +39,7 @@
                   </AreaChart>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/style.css" GridPane.rowIndex="1">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/envi.css" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="5.0" top="5.0" />
                </GridPane.margin>
@@ -47,7 +47,7 @@
                   <PieChart fx:id="grafikPie" layoutX="12.0" layoutY="-6.0" prefHeight="394.0" prefWidth="524.0" title="Statistika Pie" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/style.css" GridPane.columnIndex="1">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/envi.css" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="10.0" top="10.0" />
                </GridPane.margin>
@@ -62,7 +62,7 @@
                   </BarChart>
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="white-box" stylesheets="@../style/envi.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
                </GridPane.margin>

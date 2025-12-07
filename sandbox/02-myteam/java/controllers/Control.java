@@ -91,7 +91,7 @@ public class Control {
 //
 //            // pakai Label agar CSS hover blok bisa jalan
 //            Label label = new Label(item);
-//            label.getStyleClass().add("label"); // pastikan CSS .label:hover ada di style.css
+//            label.getStyleClass().add("label"); // pastikan CSS .label:hover ada di envi.css
 //
 //            // klik event
 //            label.setOnMouseClicked(e -> {

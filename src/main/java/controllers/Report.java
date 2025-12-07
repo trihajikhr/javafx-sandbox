@@ -1,8 +1,10 @@
 package controllers;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.*;
+import javafx.scene.control.Tooltip;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -218,7 +220,7 @@ public class Report implements Initializable {
         grafikStackedArea.getData().add(dataSeries2);
 
         XYChart.Series dataSeries3 = new XYChart.Series<>();
-        dataSeries2.setName("Mobile");
+        dataSeries3.setName("PC");
 
         dataSeries3.getData().add(new XYChart.Data( 0, 201));
         dataSeries3.getData().add(new XYChart.Data( 1, 100));
@@ -321,6 +323,47 @@ public class Report implements Initializable {
         grafikStackedBar.getData().addAll(pemasukan, pengeluaran, tabungan);
     }
 
+//    private void pasangTooltip(XYChart<String, Number> chart) {
+//        Platform.runLater(() -> {
+//            for (XYChart.Series<String, Number> series : chart.getData()) {
+//                for (XYChart.Data<String, Number> data : series.getData()) {
+//                    Tooltip t = new Tooltip(data.getXValue() + ": " + data.getYValue());
+//                    if (data.getNode() != null) {
+//                        Tooltip.install(data.getNode(), t);
+//                    } else {
+//                        // node belum siap, pasang listener
+//                        data.nodeProperty().addListener((obs, oldNode, newNode) -> {
+//                            if (newNode != null) {
+//                                Tooltip.install(newNode, t);
+//                            }
+//                        });
+//                    }
+//                }
+//            }
+//        });
+//    }
+
+    private <X, Y> void pasangTooltip(XYChart<X, Y> chart) {
+        Platform.runLater(() -> {  // tunggu chart selesai render
+            for (XYChart.Series<X, Y> series : chart.getData()) {
+                for (XYChart.Data<X, Y> data : series.getData()) {
+                    Tooltip t = new Tooltip(data.getXValue() + ": " + data.getYValue());
+
+                    if (data.getNode() != null) {
+                        Tooltip.install(data.getNode(), t);
+                    } else {
+                        data.nodeProperty().addListener((obs, oldNode, newNode) -> {
+                            if (newNode != null) {
+                                Tooltip.install(newNode, t);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // generate awal data
@@ -332,11 +375,19 @@ public class Report implements Initializable {
         regenerateAllData();
 
         setGrafikScatter();
+        pasangTooltip(grafikScatter);
         regenerateAllData();
 
         setGrafikStackedArea();
+        pasangTooltip(grafikStackedArea);
         regenerateAllData();
 
         setGrafikStackedBar();
+        pasangTooltip(grafikStackedBar);
+
+        grafikBubble.setAnimated(true);
+        grafikScatter.setAnimated(true);;
+        grafikStackedArea.setAnimated(true);
+        grafikStackedBar.setAnimated(true);
     }
 }

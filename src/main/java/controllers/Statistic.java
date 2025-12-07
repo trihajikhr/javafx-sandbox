@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -9,6 +10,7 @@ import javafx.scene.chart.BarChart;
 import javafx.scene.chart.AreaChart;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Tooltip;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -235,6 +237,65 @@ public class Statistic implements Initializable {
         grafikPie.setData(grafik);
     }
 
+
+//    private void pasangTooltip(XYChart<String, Number> chart) {
+//        Platform.runLater(() -> {
+//            for (XYChart.Series<String, Number> series : chart.getData()) {
+//                for (XYChart.Data<String, Number> data : series.getData()) {
+//                    Tooltip t = new Tooltip(data.getXValue() + ": " + data.getYValue());
+//                    if (data.getNode() != null) {
+//                        Tooltip.install(data.getNode(), t);
+//                    } else {
+//                        // node belum siap, pasang listener
+//                        data.nodeProperty().addListener((obs, oldNode, newNode) -> {
+//                            if (newNode != null) {
+//                                Tooltip.install(newNode, t);
+//                            }
+//                        });
+//                    }
+//                }
+//            }
+//        });
+//    }
+
+    private void pasangTooltipPie(PieChart chart) {
+        Platform.runLater(() -> {
+            for (PieChart.Data data : chart.getData()) {
+                Tooltip t = new Tooltip(data.getName() + ": " + (int)data.getPieValue());
+
+                if (data.getNode() != null) {
+                    Tooltip.install(data.getNode(), t);
+                } else {
+                    data.nodeProperty().addListener((obs, oldNode, newNode) -> {
+                        if (newNode != null) {
+                            Tooltip.install(newNode, t);
+                        }
+                    });
+                }
+            }
+        });
+    }
+
+    private <X, Y> void pasangTooltip(XYChart<X, Y> chart) {
+        Platform.runLater(() -> {  // tunggu chart selesai render
+            for (XYChart.Series<X, Y> series : chart.getData()) {
+                for (XYChart.Data<X, Y> data : series.getData()) {
+                    Tooltip t = new Tooltip(data.getXValue() + ": " + data.getYValue());
+
+                    if (data.getNode() != null) {
+                        Tooltip.install(data.getNode(), t);
+                    } else {
+                        data.nodeProperty().addListener((obs, oldNode, newNode) -> {
+                            if (newNode != null) {
+                                Tooltip.install(newNode, t);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // generate awal data
@@ -243,17 +304,26 @@ public class Statistic implements Initializable {
 
         // panggli areaChart
         setGrafikArea();
+        pasangTooltip(grafikArea);
         regenerateAllData();
 
         // barChart
         setGrafikBar();
+        pasangTooltip(grafikBar);
         regenerateAllData();
 
         // lineChart
         setGrafikLine();
+        pasangTooltip(grafikLine);
         regenerateAllData();
 
         // pirChart
         setGrafikPie();
+        pasangTooltipPie(grafikPie);
+
+        grafikLine.setAnimated(true);
+        grafikBar.setAnimated(true);
+        grafikPie.setAnimated(true);
+        grafikArea.setAnimated(true);
     }
 }
