@@ -71,7 +71,7 @@ Bagian ini menyajikan **panduan terperinci** dan **terstruktur** mengenai setiap
 Setiap entri kontainer dirancang dengan format yang konsisten (`Konsep Dasar`, `Mekanisme Tata Letak`, dan `Kasus Penggunaan Populer`) untuk memudahkan perbandingan dan referensi cepat.
 
 <details>
-<summary><b>Klik di sini untuk melihat Daftar Lengkap 18 Kontainer JavaFX</b></summary>
+<summary><b>Klik di sini untuk melihat Daftar Lengkap 19 Kontainer JavaFX</b></summary>
 
 ### Daftar Kontainer Utama JavaFX
 
