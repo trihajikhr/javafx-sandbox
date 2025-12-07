@@ -31,6 +31,7 @@ public class Control {
         toggleButton.setText("≡");
     }
 
+    // veri navbar button fixed di layer icon
     @FXML
     public void toggleSidebars() {
         toggleButton.setDisable(true);
@@ -53,6 +54,8 @@ public class Control {
         tl.play();
     }
 
+
+    // versi navbar button ikut pindah
     @FXML
     public void toggleSidebar() {
         toggleButton.setDisable(true);
