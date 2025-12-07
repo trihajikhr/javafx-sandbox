@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fitToWidth="true"
+            prefWidth="300"
+            prefHeight="200">
+
+    <!-- Konten yang bisa digeser -->
+    <content>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <children>
+
+                <Label text="Item 1" />
+                <Label text="Item 2" />
+                <Label text="Item 3" />
+                <Label text="Item 4" />
+                <Label text="Item 5" />
+                <Label text="Item 6" />
+                <Label text="Item 7" />
+                <Label text="Item 8" />
+                <Label text="Item 9" />
+                <Label text="Item 10" />
+                <Label text="Item 11" />
+                <Label text="Item 12" />
+
+            </children>
+        </VBox>
+    </content>
+
+</ScrollPane>

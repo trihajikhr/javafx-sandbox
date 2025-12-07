@@ -8,10 +8,9 @@ import javafx.stage.Stage;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/daftar.fxml"));
-        Database.getInstance();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/layout.fxml"));
         stage.setScene(new Scene(loader.load()));
-        stage.setTitle("Percobaaan SQLite!");
+        stage.setTitle("Mencoba Scrollpane!");
         stage.show();
     }
 
