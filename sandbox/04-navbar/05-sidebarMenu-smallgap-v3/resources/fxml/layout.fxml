@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.Control"
+            prefWidth="900" prefHeight="600">
+
+    <!--
+      LAYER 2: labelSidebar (dia akan slide in/out)
+      layoutX = 60 (tepat di sebelah iconBar), translateX = -200 (hidden)
+    -->
+    <AnchorPane fx:id="labelSidebar"
+                layoutX="60" prefWidth="200" prefHeight="600"
+                translateX="-200"
+                style="-fx-background-color: #2b2b2b;">
+        <children>
+            <VBox spacing="12" layoutX="12" layoutY="20">
+                <children>
+                    <Label text="Dashboard" style="-fx-text-fill: white; -fx-font-size: 14;" />
+                    <Label text="Projects"  style="-fx-text-fill: white; -fx-font-size: 14;" />
+                    <Label text="Settings"  style="-fx-text-fill: white; -fx-font-size: 14;" />
+                    <Label text="About"     style="-fx-text-fill: white; -fx-font-size: 14;" />
+                </children>
+            </VBox>
+        </children>
+    </AnchorPane>
+
+    <!--
+      LAYER 3: mainContent (akan didorong)
+      leftAnchor = 60 (start setelah iconBar)
+    -->
+    <AnchorPane fx:id="mainContent"
+                AnchorPane.topAnchor="0"
+                AnchorPane.bottomAnchor="0"
+                AnchorPane.leftAnchor="60"
+                AnchorPane.rightAnchor="0"
+                style="-fx-background-color: #f4f6f8;">
+        <children>
+            <Label text="Main Content Area" layoutX="20" layoutY="20" style="-fx-font-size: 18;" />
+            <!-- contoh konten -->
+        </children>
+    </AnchorPane>
+
+    <!--
+      LAYER 1: iconBar (selalu di atas, lebar 60px). Letakkan terakhir agar z-order di atas.
+      Tombol toggle ada di sini.
+    -->
+    <VBox fx:id="iconBar"
+          prefWidth="60"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          style="-fx-background-color: #1f2937; -fx-alignment: top-center;">
+        <children>
+            <Button fx:id="toggleButton"
+                    text="≡"
+                    onAction="#toggleSidebar"
+                    style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 18; -fx-padding: 10;" />
+            <!-- icon placeholders -->
+            <Label text="🏠" style="-fx-font-size: 18; -fx-text-fill: white; -fx-padding: 12 0 0 0;" />
+            <Label text="🔧" style="-fx-font-size: 18; -fx-text-fill: white; -fx-padding: 12 0 0 0;" />
+            <Label text="📄" style="-fx-font-size: 18; -fx-text-fill: white; -fx-padding: 12 0 0 0;" />
+        </children>
+    </VBox>
+
+</AnchorPane>
+
