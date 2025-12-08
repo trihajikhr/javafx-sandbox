@@ -1,0 +1,6 @@
+.chart-plot-background {
+    -fx-background-color: #f4f4f4;
+}
+.chart-legend {
+    -fx-background-color: transparent;
+}
