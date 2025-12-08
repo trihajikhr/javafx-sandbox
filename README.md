@@ -55,7 +55,7 @@ Untuk bisa menggunakan JavaFX dan Maven, gunakan dokumentasi dan panduan yang te
 - [Scene Builder](doc/scene-builder.md) - Pemasangan dan integrasi Scene Builder dengan Intellij IDEA.
 - [Menjalankan Program JavaFX dengan Maven] - _Coming Soon_
 - [Mengkonversi ke Format JAR](doc/mengkonversi-java-ke-jar.md) - Melakukan konversi dari Java file ke format JAR.
-- [Mengkonversi JAR ke EXE](doc/mengkonveri-jar-ke-exe.md)- Cara merubah program Java dengan format JAR menjadi EXE.
+- [Mengkonversi JAR ke EXE](doc/mengkonversi-jar-ke-exe.md)- Cara merubah program Java dengan format JAR menjadi EXE.
 
 > [!CAUTION]
 > Tidak ada pengembangan yang berjalan tanpa Error. Ada banyak error ketika berurusan dengan JavaFX dan Maven. Kunjungi Error-log untuk melihat dokumentasi Error yang terjadi.

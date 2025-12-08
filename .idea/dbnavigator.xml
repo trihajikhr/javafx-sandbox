@@ -98,7 +98,7 @@
           <protocol value="" />
           <url-parameters />
           <files>
-            <file path="D:\Github-Grinder\Java\javafx-sandbox\src\main\resources\database\data.db" schema="main" />
+            <file path="D:\Github-Grinder\Java\javafx-sandbox\databases\data.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
